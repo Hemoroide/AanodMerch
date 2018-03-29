@@ -1,0 +1,18 @@
+h1, h3, h5  {
+    text-align: center;
+    }
+
+nav {
+    width: 100%;
+    }
+
+#menu li {
+    display: inline;
+    text-align: center;
+    margin: 5%;
+    }
+
+body {
+    background-color: darkgrey;
+    }
+
