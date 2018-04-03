@@ -76,7 +76,7 @@ $merch = DatabaseQuery::afficherMerch();
 <div class="container">
   <div class="row">
 
-    <table>
+    <table class="centered">
       <thead>
       <tr>
        
