@@ -10,25 +10,22 @@
 
   </head>
 
-<header> 
+<nav> 
 
-<div class="container">
-  <div class="row">
-    <div class="col s12"><p class="text-center"><h1>AANOD</h1></p></div>
-  </div>
-</div>
-  
-</header>
+<div class="nav-wrapper">
 
-<body>
+  <a href="AanodAdmin.php" class="brand-logo"><img src="..\image\aanod_logo-black.png"></a>
 
-<div class="container">
-  <div class="row">
-    <div class="col s6"><h3><a href="AanodMerch.php">MERCH</a></h3></div>
+  <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+    <a href="./AanodToolbox.php" class="waves-effect waves-light btn blue darken-4">Toolbox</a>
+    <a href="./AanodMerch.php" class="waves-effect waves-light btn blue darken-4">Merch</a>
     
-    <div class="col s6"><h3><a href="AanodToolbox.php">TOOLBOX</a></h3></div>
-  </div>
+  </ul> 
+
 </div>
+
+</nav>
 
   <table class="centered">
         <thead>
@@ -46,6 +43,9 @@
             <td>
             
             <?php 
+
+            /*  LECTURE DES DOSSIER POUR AFFICHER LES FICHIER
+                LIEN POUR POUVROIS LES TELECHARGER */
 
             if ($dossierDrum = opendir('../file/drum/')) {
 
@@ -74,7 +74,7 @@
 
                 if (($fichierLyrics != '.') && ($fichierLyrics != '..')) {
 
-                  echo '<li><a href="../file/drum/' . $fichierLyrics . '">' . $fichierLyrics . '</a></li>';
+                  echo '<li><a href="../file/lyrics/' . $fichierLyrics . '">' . $fichierLyrics . '</a></li>';
 
                 }
 
@@ -111,9 +111,11 @@
       </tbody>
     </table>
 
+    <!-- SECTION D'UPLOAD DE FICHIER -->
+
   <div class="row">
     
-    <div class= "col s4">
+    <div class= "col s4 ">
  
       <form enctype="multipart/form-data" action="fileUploadDrum.php" method="post">
 

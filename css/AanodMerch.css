@@ -6,13 +6,10 @@ nav {
     width: 100%;
     }
 
-#menu li {
+li {
     display: inline;
     text-align: center;
     margin: 5%;
-    }
-
-body {
-    background-color: darkgrey;
+   
     }
 

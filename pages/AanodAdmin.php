@@ -9,29 +9,25 @@
   
 </head>
 
-<header> 
+<nav> 
 
-<div class="container">
-  <div class="row">
-    <div class="col-12"><p class="text-center"><h1>AANOD</h1></p></div>
-  </div>
-</div>
-  
-</header>
+<div class="nav-wrapper">
 
-<div class="container">
-  <div class="row">
-    <div class="col s6"><h3><a href="AanodMerch.php">MERCH</a></h3></div>    
-    <div class="col s6"><h3><a href="AanodToolbox.php">TOOLBOX</a></h3></div>
-  </div>
+  <a href="#" class="brand-logo"><img src="..\image\aanod_logo-black.png"></a>
+
+  <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+    <a href="./AanodToolbox.php" class="waves-effect waves-light btn blue darken-4">Toolbox</a>
+    <a href="./AanodMerch.php" class="waves-effect waves-light btn blue darken-4">Merch</a>
+    
+  </ul> 
+
 </div>
 
+</nav>
 
 <body>
 
 </body>
-
-<script type="text/javascript" src="./js/aanod.js"></script>
-
 
 </html>

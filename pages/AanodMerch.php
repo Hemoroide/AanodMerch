@@ -47,36 +47,38 @@ $merch = DatabaseQuery::afficherMerch();
   <meta charset="utf-8">
   <title>AANOD ADMIN</title>
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css"/>
-  <link rel="stylesheet" href="..\vendor\materialize.css">
   <link rel="stylesheet" href="..\css\AanodMerch.css">
-
-
- 
-</head>
-
-<header> 
-
-  <div class="row">
-    <div class="col-12"><p class="text-center"><h1>AANOD</h1></p></div>
-  </div>
-</div>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="..\vendor\materialize.css">
   
-</header>
+   
+</head>
+  
+<nav> 
 
-  <div class="row">
-    <div class="col s6"><h3><a href="AanodMerch.php">MERCH</a></h3></div>
-    
-    <div class="col s6"><h3><a href="AanodToolbox.php">TOOLBOX</a></h3></div>
+  <div class="nav-wrapper">
+
+    <a href="AanodAdmin.php" class="brand-logo"><img src="..\image\aanod_logo-black.png"></a>
+
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      <a href="./AanodToolbox.php" class="waves-effect waves-light btn blue darken-4">Toolbox</a>
+      <a href="./AanodMerch.php" class="waves-effect waves-light btn blue darken-4">Merch</a>
+      
+    </ul> 
+
   </div>
 
+</nav>
 
 <body>
+
+  <h3>LISTE DU MERCH</h3>
 
 <div class="container">
   <div class="row">
 
-    <table class="centered">
+    <table class="centered stripe hover" id="datatableMerch">
       <thead>
       <tr>
        
@@ -88,6 +90,8 @@ $merch = DatabaseQuery::afficherMerch();
       </thead>
            
         <?php
+
+        // BOUCLE POUR RECUPERER LES ITEMS ET LES QUANITIE DE LA BDD "MERCH" ET LES AJOUTER DANS LA TABLE  //
 
         foreach ($merch as $value) {
 
@@ -105,6 +109,8 @@ $merch = DatabaseQuery::afficherMerch();
 
   </div>
 
+<h3>AJOUT OU MODIF DU MERCH</h3>
+
 <div class="row">
 
   <div class="col s6">
@@ -112,6 +118,8 @@ $merch = DatabaseQuery::afficherMerch();
     <h5> AJOUTER UN ITEM </h5>
 
     <form  method="post" action="AanodMerch.php">
+
+      <!-- AJOUT D'UN ITEM DANS LA BDD -->
 
       Ajouter un item : <input name='ajoutItem' class="text" placeholder="Nom de l'item" id='ajoutItem' required><br>
       Quantité : <input name='ajoutQuantiteItem' type="number" placeholder="Quantité" id= 'ajoutQuantiteItem' required>
@@ -126,6 +134,8 @@ $merch = DatabaseQuery::afficherMerch();
   <h5> MODIFIER QUANTITE D'UN ITEM </h5>
 
     <form method="post" action="AanodMerch.php">
+
+    <!-- UPDATE DE LA BDD -->
       
       Modifier un item : <input class="text" name='modifItem' placeholder="Nom de l'item" id="modifItem" required><br>
       Nouvelle quantité : <input type="number" name='modifQuantiteItem' placeholder="Quantité" id="modifQuantiteItem" required>
@@ -140,7 +150,8 @@ $merch = DatabaseQuery::afficherMerch();
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
-<script type="text/javascript" src="../js/aanod.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script src="../js/aanod.js"></script>
 
 </html>
