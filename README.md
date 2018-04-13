@@ -5,7 +5,7 @@ Ce repos additionnel vous permet d'evaluer le CRUD.
 
 PREREQUIS :
 
-Serveur apache (Par exemple : wamp, mySQL
+Serveur apache (Par exemple : wamp), mySQL
 
 Install 
 
